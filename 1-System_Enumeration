@@ -1,0 +1,20 @@
+
+System Enumeration : 
+
+Now we gather some information of the target system like : system info, Operating system name, Version, System 
+Architecture, Host name, Patching Information, Hotfixes, Drives on the system, etc
+
+command on cmd.exe : 
+1 -> systeminfo 
+2 -> systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
+3 -> hostname
+4 -> wmic qfe 
+	To get information about security update and patches. 
+	wmic : window management instrumentation
+	qfe : quick fix engineering 
+5 -> wmic qfe get caption,Description,HotFixId
+6 -> wmic logicaldisk 
+	this will display the information about the disks
+7 -> wmic logicaldisk get caption,...
+
+

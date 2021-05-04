@@ -1,0 +1,27 @@
+
+Enumerating Users :
+
+Command on cmd.exe
+
+1-> whoami 
+
+2-> whoami /priv 
+	to know the privilege of the user 
+
+3-> whoami /groups 
+	Display all the groups in which current user is present 
+
+4-> net user 
+	Display the current user on screen 
+
+5-> net user <user_name> 
+	Display the Complete details of the user
+
+6-> net localgroup
+	Display the local groups
+
+7-> net localgroup <group_name>
+	Display the users in group 
+
+
+

@@ -1,0 +1,17 @@
+
+Network Enumeration 
+
+commands in cmd.exe
+
+1-> ipconfig /all 
+	Display information about Networks eg. interface, ip_address
+
+2-> arp -a
+	Display MAC address_table
+
+3-> route print
+	Display the routing table
+
+4-> netstat -ano 
+	Display what ports are out there 
+
