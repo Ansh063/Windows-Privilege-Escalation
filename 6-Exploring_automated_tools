@@ -1,0 +1,23 @@
+
+Exploring Automated Tools : 
+
+when we upload the the winPEAS.exe and when we try to run this script then this script will not run because as we
+do not have 4.0 version of .NET. 
+
+Now we use the tool powerUp.ps1
+
+cmd > powershell -ep bypass 
+
+if this command not work in cmd shell then run 
+meterpreter> load powershell 
+powershell powerup.ps1
+
+metasploit suggester : 
+meterpreter > run post/multi/recon/local_exploit_suggester 
+
+using window-exploit-suggester.py 
+command : 
+python2.7 windows-exploit-suggester.py --database 2021-05-05-mssb.xls --systeminfo /root/Windows-Privilege-Escalation/tools\ and\ Scripts/sysinfo.txt
+
+
+
