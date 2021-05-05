@@ -1,0 +1,20 @@
+
+Antivirus and Firewall Enumeration : 
+
+Command to be run in cmd.exe 
+
+1. sc query windefend
+	service control command to check for window defender 
+
+2. sc queryex type= service 
+	Display all the services on the machine and we can enumerate about anti virus software.
+
+3. netsh advfirewall firewall dump   
+	Now we enumerate the information of the firewall and check what ports are open for internal and this can be help us for port forwarding to exploit further. 
+
+4. netsh firewall show state 
+	display the firewall state 
+
+5. netsh firewall show config 
+	Display any special configuration related to the host system 
+

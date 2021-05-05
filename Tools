@@ -1,0 +1,23 @@
+
+Automated Enumeration Tools : 
+
+Executables : 
+
+	1. winPEAS.exe 
+	2. Seatbelt.exe (compile)
+	3. Watson.exe (Compile)
+	4. SharpUp.exe (Compile)
+ 	
+Powershell : 
+	
+	1. Sherlock.ps1
+	2. PowerUp.ps1
+	3. jaws-enum.ps1
+
+Other : 
+	
+	1. windows-exploit-suggester.py (local)
+	2. Exploit Suggester (Metasploit)
+
+	
+
