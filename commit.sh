@@ -1,6 +1,6 @@
 #!/bin/bash
 
 git add .
-git commit -m "WAPT"
+git commit -m "Privilege escalation"
 git push
 #send "Ansh063"
