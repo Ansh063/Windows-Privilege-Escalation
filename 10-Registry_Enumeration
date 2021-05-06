@@ -1,0 +1,25 @@
+
+Registry Enumeration for passwords : 
+
+# VNC 
+
+reg query "HKCU\Software\ORL\WinVNC3\Password"
+
+# windows Autologon 
+
+reg query "HKLM\Software\Microsoft\Windows NT\Currentversion\winlogon"
+
+# SNMP Parameter
+
+reg query "HKLM\SYSTEM\Current\Controlset\Serviecs\SNMP"
+
+# Putty 
+
+reg query "HKCU\Software\SimonThanthum\PuTTY\Sessions"
+
+# Search for password in registry : 
+
+req query HKLM /f password /t REG_SZ /s
+req query HKCU /f password /t REG_SZ /s 
+
+

