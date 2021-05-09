@@ -1,0 +1,15 @@
+
+Service Enumeration - Executable Files 
+
+Find the service which have executables attach to them and if we can manipulate the executable 
+and has FILE_ALL_ACCESS on it .... so we can make our own file and place there. 
+
+use the accesschk.exe and powerup.ps1 to find all the executable that have misconfiguration and we can modift them 
+
+Now we have check that the file can be modified and replace by a malicious file 
+
+use the msfvenom and create a .exe file, transfer this file and run and you got the shell 
+
+
+
+

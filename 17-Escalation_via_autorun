@@ -1,0 +1,13 @@
+
+Escalation via Autorun : 
+
+steps : 
+1. find the autorun script 
+2. create a payload same as the script name 
+3. replace the old file with our malicious payload
+4. now as soon as the administrator boots up the autorun script will run and we get the shell 
+
+
+
+
+
