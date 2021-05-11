@@ -1,0 +1,22 @@
+
+Startup Application : 
+
+Tool used : icacls.exe 
+basically it going to look at the permission of ACLs and allows us to see where we might have access. 
+
+here powerup fails to do this job 
+
+command in cmd : 
+
+icacls.exe "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+
+if the command returns F : this means full controls 
+
+Now we generate a malicious file executable and load it to startup !!! 
+
+we can also use accesschk.exe : 
+C:\PrivEsc\accesschk.exe /accepteula -d "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
+
+after placing the malicious payload to C;\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup directory the admin need to reboot the device and we get the meterpreter. 
+
+
