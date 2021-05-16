@@ -24,6 +24,10 @@ Some Commands :
 tty is sort of teletype, but popularily known as a terminal it allows you to interact with the system by passing on the data to the system, and displaying the output produced by the system.
 
 
+Miscellaneous : 
+
+Binwalk is a tool for seaching a given binary image for embedded file and executable code. 
+
 
 
 
