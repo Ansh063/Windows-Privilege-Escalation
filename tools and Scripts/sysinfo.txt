@@ -1,14 +1,14 @@
-Host Name:                 LOVE
+Host Name:                 ATOM
 OS Name:                   Microsoft Windows 10 Pro
 OS Version:                10.0.19042 N/A Build 19042
 OS Manufacturer:           Microsoft Corporation
 OS Configuration:          Standalone Workstation
 OS Build Type:             Multiprocessor Free
-Registered Owner:          roy
+Registered Owner:          barry
 Registered Organization:   
-Product ID:                00330-80112-18556-AA148
-Original Install Date:     4/12/2021, 1:14:12 PM
-System Boot Time:          5/14/2021, 11:59:12 PM
+Product ID:                00330-80112-18556-AA358
+Original Install Date:     4/1/2021, 3:57:31 AM
+System Boot Time:          5/16/2021, 8:50:46 PM
 System Manufacturer:       VMware, Inc.
 System Model:              VMware7,1
 System Type:               x64-based PC
@@ -22,13 +22,13 @@ System Locale:             en-us;English (United States)
 Input Locale:              en-us;English (United States)
 Time Zone:                 (UTC-08:00) Pacific Time (US & Canada)
 Total Physical Memory:     4,095 MB
-Available Physical Memory: 2,702 MB
-Virtual Memory: Max Size:  4,799 MB
-Virtual Memory: Available: 3,419 MB
-Virtual Memory: In Use:    1,380 MB
+Available Physical Memory: 2,336 MB
+Virtual Memory: Max Size:  5,503 MB
+Virtual Memory: Available: 3,289 MB
+Virtual Memory: In Use:    2,214 MB
 Page File Location(s):     C:\pagefile.sys
 Domain:                    WORKGROUP
-Logon Server:              \\LOVE
+Logon Server:              \\ATOM
 Hotfix(s):                 9 Hotfix(s) Installed.
                            [01]: KB4601554
                            [02]: KB4562830
@@ -37,12 +37,15 @@ Hotfix(s):                 9 Hotfix(s) Installed.
                            [05]: KB4580325
                            [06]: KB4586864
                            [07]: KB4589212
-                           [08]: KB5001330
-                           [09]: KB5001405
+                           [08]: KB5000842
+                           [09]: KB5000981
 Network Card(s):           1 NIC(s) Installed.
                            [01]: vmxnet3 Ethernet Adapter
-                                 Connection Name: Ethernet0 2
+                                 Connection Name: Ethernet0
                                  DHCP Enabled:    No
                                  IP address(es)
-                                 [01]: 10.10.10.239
+                                 [01]: 10.10.10.237
+                                 [02]: fe80::e5f9:1321:ca40:46b6
+                                 [03]: dead:beef::fd1c:8d9e:bedd:e60f
+                                 [04]: dead:beef::e5f9:1321:ca40:46b6
 Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
